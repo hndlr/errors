@@ -1,0 +1,35 @@
+{
+  "name": "@hndlr/errors",
+  "version": "0.0.1-beta.1",
+  "description": "JS-less NPM Package that builds on publish",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "module": "index.js",
+  "scripts": {
+    "prebuild": "error build",
+    "build": "cross-env BABEL_ENV=build babel src --out-dir . --copy-files",
+    "prepublishOnly": "npm run build && cp ./types/index.d.ts index.d.ts && rm -r ./src ./types",
+    "postpublish": "rm -r index.js index.d.ts"
+  },
+  "keywords": [
+    "http",
+    "errors"
+  ],
+  "author": "Harry Wright",
+  "license": "ISC",
+  "dependencies": {
+    "http-status-codes": "^2.1.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/node": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "@harrytwright/error-template": "^2.0.0-beta.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.3.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "cross-env": "^5.1.6",
+    "standard": "^14.3.4"
+  }
+}
