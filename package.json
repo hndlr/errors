@@ -1,6 +1,6 @@
 {
   "name": "@hndlr/errors",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "JS-less NPM Package that builds on publish",
   "main": "index.js",
   "types": "index.d.ts",
