@@ -52,5 +52,5 @@ jspm_packages/
 .env.test
 
 #*/.env
-dist
 var
+index.ts
